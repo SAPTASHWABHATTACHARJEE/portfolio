@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            saptashwa
+        </title>  
+        <link rel="icon" type="image/x-icon" href="favicon.jpg">
+        <link rel="stylesheet" type="text/css" href="new.css">
+    </head>
+    <body>
+        <header>
+            <!--for creating the navigation bar-->
+            <div class="container1">
+                <nav>
+                    <!--elements of navigation-->
+                    <ul>
+                        <li><a href="index.html" style="text-decoration: none;">HOME</a></li>
+						<li><a href="new.html" style="text-decoration:none;">About</a></li>
+                        <li><a href="education.html" style="text-decoration:none;">Educational Background</a></li>
+						<li><a href="timetable.html" style="text-decoration:none;"> Time Table <Table></Table></a></li>
+						<li><a href="cv.html" style="text-decoration:none;">Resume</a></li>
+                        <li><a href="contact.html" style="text-decoration:none;">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+	<!--About(start)-->
+	<table id="about" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor=#434750>
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td height="120" align="center"
+							valign="middle" colspan="2">
+							<font face="Raleway" size="7"
+								color="yellow">
+								About Me
+							</font>
+							<hr color="yellow" width="90">
+						</td>
+					</tr>
+					<tr>
+						<td width="40%">
+							<img src="me.jpg" style="width:400px;height:500px;">
+						</td>
+						<td width="60%">
+							<font face="Montserrat" size="4"
+								color="white">
+								Thanks for your interest, here
+								is my story.
+								<hr color=#434750>
+								I am Saptashwa Bhattacharjee, a 3rd Year undegraduate students
+                                in the department of Electronics and Electrical Communication Engineering
+                                at Indian Institute of Technology(IIT) Kharagpur.
+								<hr color=#434750>
+
+								I was fascinated by MOSFETS since I was introduced to it in my 2nd year 
+                                of undergraduate study and I decieded to dig deeper into it. I was taught Analog
+                                Electronics Circits by Professor Bibhudutta Sahoo, who was guided by Professor Behzad
+                                Razavi at UCLA during his PhD.
+								<hr color=#434750>
+							</font>
+						</td>
+					</tr>
+				</table>
+				<hr color=#434750>
+				<hr color=#434750>
+				<hr color=#434750>
+			</td>
+		</tr>
+	</table>
+	<!--About(end)-->
+	<!--Projects(start)-->
+	<style>
+		.collapsible {
+		  background-color: #d8d2d2;
+		  color: rgb(0, 0, 0);
+		  cursor: pointer;
+		  padding: 18px;
+		  width: 100%;
+		  border: none;
+		  text-align: left;
+		  outline: none;
+		  font-size: 15px;
+		  font-family:'Roboto Condensed' ;
+		}
+		
+		.active, .collapsible:hover {
+		  background-color: #f0f008;
+		}
+		
+		.collapsible:after {
+		  content: '\002B';
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  margin-left: 5px;
+		}
+		
+		.active:after {
+		  content: "\2212";
+		}
+		
+		.content {
+		  padding: 0 18px;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  background-color: #f1f1f1;
+		}
+		</style>
+		<h4 style="font-family:Montserrat"><b>Projects</b></h4>
+		<button class="collapsible" style="font-family:Montserrat;">Quadrature Voltage Controlled Oscillator Design</button>
+		<div class="content">
+		  <p style="font-family:Montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		<button class="collapsible" style="font-family:Montserrat;">Analog Front End Design</button>
+		<div class="content">
+		  <p style="font-family:Montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		<button class="collapsible" style="font-family:Montserrat;">Phase retreival of signal using Compressive sensing</button>
+		<div class="content">
+		  <p style="font-family:Montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		
+		<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			  content.style.maxHeight = null;
+			} else {
+			  content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		  });
+		}
+		</script>
+		
+	</body>
+</html>
