@@ -19,22 +19,44 @@
         <li style="--i:2;"><a href="sop.html">Statement of Purpose</a></li>
         <li style="--i:1;"><a href="contact.html">Contact Me</a></li>
       </ul>
-    var originalBG = $(".nav a").css("background-color");
+     <div class="bg-aura-effect">
+         hello
+     </div>
+        <style>
+  .bg-aura-effect {
+    position: relative;
+    z-index: 1;
+    /* Add other styles for your container element */
+  }
 
-$('.nav li:not(".active") a').mousemove(function(e) {
-    x = e.pageX - this.offsetLeft;
-    y = e.pageY - this.offsetTop;
-    xy = x + " " + y;
-    bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", 100, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0.0))), " + originalBG;
-    bgMoz = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBG + " " + gradientSize + "px)";
-
-    $(this)
-        .css({background: bgWebKit})
-        .css({background: bgMoz});
+  /* Aura element styles */
+  .bg-aura-effect .aura-element {
+    position: absolute;
+    width: 100px; /* Adjust the size of the aura element as needed */
+    height: 100px;
+    background: rgba(255, 255, 255, 0.7); /* Set the aura element color and opacity */
+    border-radius: 50%; /* Make it circular */
+    pointer-events: none; /* Prevent the aura element from blocking mouse events */
+    z-index: 2; /* Place the aura element above the background */
+    transform: translate(-50%, -50%); /* Center the aura element on the cursor */
+  }
+</style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  jQuery(function($) {
+    $('.bg-aura-effect').mouseenter(function() {
+      // Add the aura element on hover
+      $(this).append('<div class="aura-element"></div>');
+    }).mousemove(function(e) {
+      // Move the aura element to follow the pointer
+      let x = e.clientX - this.getBoundingClientRect().left;
+      let y = e.clientY - this.getBoundingClientRect().top;
+      $(this).find('.aura-element').css({ top: y, left: x });
     }).mouseleave(function() {
-    $(this).css({
-        background: originalBG
+      // Remove the aura element when leaving the element
+      $(this).find('.aura-element').remove();
     });
-});
+  });
+</script>
     </body>
     </html>
