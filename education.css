@@ -110,92 +110,139 @@
 body{
   margin:0;
 }
-header{
-  background-color:#e0e2e2;
-}
-header::after{
-  content:"";
-  display:table;
-  clear:both;
-}
-.container{
-  width:80%;
-  margin:0 auto;
-}
-nav{
-  float:right;
-}
-nav ul{
-  margin: 0;
-  padding:none;
-  list-style: none;
-}
-nav li{
-  display:inline-block;
-  margin-left :40px;
-  padding-top: 10px;
-  padding-bottom:10px;
-  position: relative;
-}
-nav a{
-  font-family: 'Lucida Sans';
-  color:black;
-  text-transform: uppercase;
-  font-style:italic;    
-  font-size: 25x;
-}
-nav a::before{
-  content:"";
-  display:block;
-  height:5px;
-  width:100%;
-  background-color: blue;
-  position:absolute;
-  top:0;
-  width:0%;
-  transition: ease-in-out 500ms;
-}
-nav a:hover::before{
-  width:100%
-}
 
 * {
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+html {
+overflow-x: hidden;
 }
 
-/* Float two columns side by side */
-.column {
-  float: left;
-  width: 40%;
-  padding: 0 10px;
+.Saptashwa {
+text-decoration: none;
+color: #8490ff;
+font-size: 1.75rem;
+padding: 5px;
 }
 
-/* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0px -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+a {
+text-decoration: none;
+color: black;
+transition: color 0.3s ease;
 }
 
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
+a:hover {
+color: #8490ff;
 }
 
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
+.header {
+font-face: Montserrat;
+padding: 1.6rem 4.8rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #dfdfdf;
+box-shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
+width: 100%;
+height: 7vh;
+}
+
+.header img {
+height: 30px;
+padding-top: 10px;
+}
+
+.navbar-lists {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.navbar-lists li {
+margin-right: 20px;
+}
+
+.navbar-lists li:last-child {
+margin-right: 0;
+}
+
+.navbar-link {
+color: black;
+padding: 10px;
+transition: background-color 0.3s;
+}
+
+.icon {
+display: none;
+}
+
+.navbar-lists li:nth-child(1) i {
+color: orange;
+}
+
+.navbar-lists li:nth-child(2) i {
+color: orange;
+}
+
+.navbar-lists li:nth-child(3) i {
+color: orange;
+}
+
+.navbar-lists li:nth-child(4) i {
+color: orange;
+}
+
+.navbar-lists li:nth-child(5) i {
+color: orange;
+}
+
+.navbar-lists li:nth-child(6) i {
+color: orange;
+}
+
+@media screen and (max-width: 768px) {
+.icon {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    flex-direction: row-reverse;
+}
+
+.navbar-lists {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #3beb2b;
     width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }}
+    padding-top: 10px;
+    z-index: 998;
+}
+
+.navbar-lists.responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-lists.responsive li {
+    margin: 10px 0;
+}
+
+.navbar-link {
+    padding: 10px 20px;
+}
+
+.navbar-link i {
+    display: none;
+}
+}
