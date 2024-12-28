@@ -3,27 +3,56 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>
-            Saptashwa
-        </title>  
+        <title>Saptashwa</title>  
         <link rel="icon" type="image/x-icon" href="favicon.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="contact.css">
     </head>
 <body bgcolor=#434750>
-    <header>
-        <div class="container">
-            <nav>
-                <!--elements of navigation-->
-                <ul>
-                  <li><a href="index.html" style="text-decoration: none;">HOME</a></li>
-                  <li><a href="new.html" style="text-decoration:none;">About</a></li>
-                  <li><a href="education.html" style="text-decoration:none;">Educational Background</a></li>
-                  <li><a href="timetable.html" style="text-decoration:none;"> Time Table <Table></Table></a></li>
-                  <li><a href="cv.html" style="text-decoration:none;">Resume</a></li>
-                    <li><a href="transcript.html" style="text-decoration:none;">Transcript</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <a href="/">
+	    <img src="favicon.jpg" alt="SB"> 
+    	    <span class="logo">Saptashwa</span>
+        </a>
+        
+        <nav class="navbar">
+            <ul class="navbar-lists" id="myTopnav">
+                <li>
+                    <i class="fas fa-home"></i>
+                        <a class="navbar-link home-link" href="#">Home</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-user"></i>
+                        <a class="navbar-link about-link" href="#about-me-section">About Me</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-book-reader"></i>
+                        <a class="navbar-link service-link" href="#education-sction">Education</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                        <a class="navbar-link service-link" href="#awards-sction">Awards</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-microscope"></i>
+                        <a class="navbar-link service-link" href="#projects-sction">Projects</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-envelope"></i>
+                        <a class="navbar-link contact-link" href="#contact-form">Contact Me</a>
+                </li>
+            </ul>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            
+        </nav>
     </header>
     <div id="dec">
     <h2>CONTACT ME</h2>
