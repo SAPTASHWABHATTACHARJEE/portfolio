@@ -1,168 +1,210 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1.5px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
-  label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-  }
-  
-  input[type=submit] {
-    background-color: #33a3ee;
-    color: rgb(255,255,255);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    font-family:"Montserrat";
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-body{
-    margin:0;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-.logo {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.75rem;
-    padding: 5px;
+html {
+overflow-x: hidden;
+}
+
+.Saptashwa {
+text-decoration: none;
+color: #8490ff;
+font-size: 1.75rem;
+padding: 5px;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
+text-decoration: none;
+color: black;
+transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #8490ff;
+color: #8490ff;
 }
 
 .header {
-    padding: 1.6rem 4.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: ‎#434750;
-    color: #8490ff;
-    box-shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
-    width: 100%;
-    height: 10vh;
+font-face: Montserrat;
+padding: 1.6rem 4.8rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #dfdfdf;
+box-shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
+width: 100%;
+height: 10vh;
 }
 
 .header img {
-    height: 30px;
-    padding-top: 8px;
+height: 30px;
+padding-top: 10px;
 }
 
 .navbar-lists {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
 }
 
 .navbar-lists li {
-    margin-right: 20px;
+margin-right: 20px;
 }
 
 .navbar-lists li:last-child {
-    margin-right: 0;
+margin-right: 0;
 }
 
 .navbar-link {
-    color: #fff;
-    padding: 10px;
-    transition: background-color 0.3s;
+color: black;
+padding: 10px;
+transition: background-color 0.3s;
 }
 
 .icon {
-    display: none;
+display: none;
 }
 
 .navbar-lists li:nth-child(1) i {
-    color: orange;
+color: orange;
 }
 
 .navbar-lists li:nth-child(2) i {
-    color: orange;
+color: orange;
 }
 
 .navbar-lists li:nth-child(3) i {
-    color: orange;
+color: orange;
 }
 
 .navbar-lists li:nth-child(4) i {
-    color: orange;
+color: orange;
 }
 
 .navbar-lists li:nth-child(5) i {
-    color: orange;
+color: orange;
 }
 
 .navbar-lists li:nth-child(6) i {
-    color: orange;
+color: orange;
 }
 
 @media screen and (max-width: 768px) {
-    .icon {
-        display: flex;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 999;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-        flex-direction: row-reverse;
-    }
-
-    .navbar-lists {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #3beb2b;
-        width: 100%;
-        padding-top: 10px;
-        z-index: 998;
-    }
-
-    .navbar-lists.responsive {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-lists.responsive li {
-        margin: 10px 0;
-    }
-
-    .navbar-link {
-        padding: 10px 20px;
-    }
-
-    .navbar-link i {
-        display: none;
-    }
+.icon {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    flex-direction: row-reverse;
 }
 
-  #dec{
-    font-size:100%;
-    font-family:"Montserrat";
-    color: #faf7f7;
-    text-align:center;
-  }
+.navbar-lists {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #3beb2b;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 998;
+}
+
+.navbar-lists.responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-lists.responsive li {
+    margin: 10px 0;
+}
+
+.navbar-link {
+    padding: 10px 20px;
+}
+
+.navbar-link i {
+    display: none;
+}
+}
+
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1.5px solid rgb(0, 0, 0);
+border-radius: 4px;
+resize: vertical;
+}
+
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+
+input[type=submit] {
+background-color: #33a3ee;
+color: rgb(255,255,255);
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+font-family:"Montserrat";
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+.container1 {
+border-radius: 5px;
+background: rgba(0, 0, 0, 0.5);
+color: #f1f1f1;
+padding: 20px;
+width:75%;
+margin-left:12.5%;
+}
+
+.col-25 {
+float: left;
+width: 25%;
+margin-top: 6px;
+font-family:"Montserrat";
+font-size: 125%;
+}
+
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+font-family:"Papyrus";
+font-size: 125%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.col-25, .col-75, input[type=submit] {
+width: 100%;
+margin-top: 0;
+}
+}
+
+#dec{
+font-size:100%;
+font-family:"Montserrat"
+color: #faf7f7;
+text-align:center;
+}
