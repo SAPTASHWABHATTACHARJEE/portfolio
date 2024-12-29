@@ -1,20 +1,21 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Saptashwa</title>  
-        <link rel="icon" type="image/x-icon" href="favicon.jpg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="contact.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="contact.css" type="text/css" />
+      <title>Saptashwa</title>
+      <link rel="icon" type="image/x-icon" href="favicon.jpg">
     </head>
-<body bgcolor=#434750>
-    <header class="header">
+
+    <body><center>
+      
+      <header class="header">
         <a href="/">
-	    <img src="favicon.jpg" alt="SB"> 
-    	    <span class="logo">Saptashwa</span>
+          <img src="favicon.jpg" alt="Saptashwa"> 
+          <span class="Saptashwa">Saptashwa</span>
+          &nbsp;
         </a>
-        
         <nav class="navbar">
             <ul class="navbar-lists" id="myTopnav">
                 <li>
@@ -39,7 +40,7 @@
 
                 <li>
                     <i class="fas fa-microscope"></i>
-                        <a class="navbar-link service-link" href="projects.html">Projects</a>
+                        <a class="navbar-link service-link" href="project.html">Projects</a>
                 </li>
                 
                 <li>
@@ -47,60 +48,45 @@
                         <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
                 </li>
             </ul>
-            
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            
         </nav>
     </header>
-	
-    <div id="dec">
-    <p>Thank you for taking out your time to take a tour of my website. Please drop your valuable suggestions or queries</p>
+
+    <div class="dec">
+        <p>Thank you for taking out your time to take a tour of my website. Please drop your valuable suggestions or queries</p>
     </div>
-	
+    
     <div class="container1">
-      <form action="/action_page.php">
-      <div class="row">
+        <form action="/action_page.php">
+        <div class="row">
         <div class="col-25">
-          <label for="fname">First Name</label>
+            <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Your name" style="font-family:Montserrat;">
+            <input type="text" id="fname" name="firstname" placeholder="Your first name" style="font-family:'Times New Roman', Times, serif;">
         </div>
-      </div>
-      <div class="row">
+        </div>
+        <div class="row">
         <div class="col-25">
-          <label for="lname">Last Name</label>
+            <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="Your last name" style="font-family:Montserrat;">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name" style="font-family:'Times New Roman', Times, serif;">
         </div>
-      </div>
-      <div class="row">
+        </div>
+        <div class="row">
         <div class="col-25">
-          <label for="country">Country</label>
+            <label for="subject">Message</label>
         </div>
         <div class="col-75">
-          <select id="country" name="country">
-            <option value="India" style="font-family:Montserrat;">India</option>
-            <option value="Other" style="font-family:Montserrat;">Other</option>
-          </select>
+            <textarea id="subject" name="subject" placeholder="Write your message here" style="height:200px;font-family:'Times New Roman', Times, serif;"></textarea>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="subject">Subject</label>
         </div>
-        <div class="col-75">
-          <textarea id="subject" name="subject" placeholder="Write something" style="height:200px;font-family:Montserrat;"></textarea>
+        <br>
+        <div class="row">
+        <input type="submit" value="Submit" style="font-family:'Times New Roman', Times, serif;">
         </div>
-      </div>
-      <br>
-      <div class="row">
-        <input type="submit" value="Submit" style="font-family:Montserrat;">
-      </div>
-      </form>
+        </form>
     </div>
+
     </body>
 </html>
