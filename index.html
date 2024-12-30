@@ -1,59 +1,78 @@
-<!DOCTYPe html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>
-            Saptashwa
-        </title>  
-        <link rel="icon" type="image/x-icon" href="favicon.jpg">
-        <link rel="stylesheet" type="text/css" href="index.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="index.css" type="text/css" />
+      <title>Saptashwa</title>
+      <link rel="icon" type="image/x-icon" href="favicon.jpg">
     </head>
-    <body>
-     <div class="bg-aura-effect">
-        <ul>
-        <li style="--i:5;"><a href="about.html">About Me</a></li>
-        <li style="--i:4;"><a href="education.html">Education</a></li>
-        <li style="--i:3;"><a href="awards.html">Awards</a></li>
-        <li style="--i:2;"><a href="project.html">Projects</a></li>
-        <li style="--i:1;"><a href="contact.html">Contact Me</a></li>
-      </ul>
-     </div>
-        <style>
-  .bg-aura-effect {
-    position: relative;
-    z-index: 1;
-    /* Add other styles for your container element */
-  }
 
-  /* Aura element styles */
-  .bg-aura-effect .aura-element {
-    position: absolute;
-    width: 100px; /* Adjust the size of the aura element as needed */
-    height: 100px;
-    background: rgba(255, 255, 255, 0.7); /* Set the aura element color and opacity */
-    border-radius: 50%; /* Make it circular */
-    pointer-events: none; /* Prevent the aura element from blocking mouse events */
-    z-index: 2; /* Place the aura element above the background */
-    transform: translate(-50%, -50%); /* Center the aura element on the cursor */
-  }
-</style>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  jQuery(function($) {
-    $('.bg-aura-effect').mouseenter(function() {
-      // Add the aura element on hover
-      $(this).append('<div class="aura-element"></div>');
-    }).mousemove(function(e) {
-      // Move the aura element to follow the pointer
-      let x = e.clientX - this.getBoundingClientRect().left;
-      let y = e.clientY - this.getBoundingClientRect().top;
-      $(this).find('.aura-element').css({ top: y, left: x });
-    }).mouseleave(function() {
-      // Remove the aura element when leaving the element
-      $(this).find('.aura-element').remove();
-    });
-  });
-</script>
+    <body><center>
+      
+      <header class="header">
+        <a href="/">
+          <img src="favicon.jpg" alt="Saptashwa" /> 
+          <span class="Saptashwa">Saptashwa</span>
+          &nbsp;
+        </a>
+        <nav class="navbar">
+            <ul class="navbar-lists" id="myTopnav">
+                <li>
+                    <i class="fas fa-home"></i>
+                        <a class="navbar-link home-link" href="index.html">Home</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-user"></i>
+                        <a class="navbar-link about-link" href="about.html">About Me</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-book-reader"></i>
+                        <a class="navbar-link service-link" href="education.html">Education</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                        <a class="navbar-link service-link" href="awards.html">Awards</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-microscope"></i>
+                        <a class="navbar-link service-link" href="project.html">Projects</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-envelope"></i>
+                        <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+      <div class="background-image">
+        <div class="centered">Welcome to the webpage of Saptashwa Bhattacharjee!</div>
+      </div>
     </body>
-    </html>
+
+    <style>
+      *{
+        margin:0px;
+        padding:0px;
+      }
+
+    .background-image {
+      background-image: url('saptashwa.png');
+      background-size: contain; /* Ensures the image covers the entire screen */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      width: 100%; /* Full width of the viewport */
+      height: 90vh; /* Full height of the viewport */
+      margin: 0; /* No margin for better fit */
+    }
+
+    </style>
+
+</html>
