@@ -1,71 +1,93 @@
 * {
-    box-sizing: border-box;
-  }
-
-  body {
-    background-color: #33a3ee;
-    font-family: Helvetica, sans-serif;
-  }
-  body{
-    margin:0;
-  }
-  header{
-    background-color:#e0e2e2;
-  }
-  header::after{
-    content:"";
-    display:table;
-    clear:both;
-  }
-  .container1{
-    width:80%;
-    margin:0 auto;
-  }
-  nav{
-    float:right;
-  }
-  nav ul{
     margin: 0;
-    padding:none;
-    list-style: none;
-  }
-  nav li{
-    display:inline-block;
-    margin-left :40px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.Saptashwa {
+    text-decoration: none;
+    color: #2a2cb5;
+    font-size: 1.75rem;
+    padding: 5px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2a2cb5;
+}
+
+.header {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1.6rem 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dfdfdf;
+    box-shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
+    width: 100%;
+    height: 5vh;
+}
+
+.header img {
+    height: 30px;
     padding-top: 10px;
-    padding-bottom:10px;
-    position: relative;
-  }
-  nav a{
-    font-family: 'Lucida Sans';
-    color:black;
-    text-transform: uppercase;
-    font-style:italic;    
-    font-size: 25x;
-  }
-  nav a::before{
-    content:"";
-    display:block;
-    height:5px;
-    width:100%;
-    background-color:blue;
-    position:absolute;
-    top:0;
-    width:0%;
-    transition: ease-in-out 500ms;
-  }
-  nav a:hover::before{
-    width:100%
-  }
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-  }
-.center1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 45%;
-  }
+}
+
+.navbar-lists {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-lists li {
+    margin-right: 20px;
+}
+
+.navbar-lists li:last-child {
+    margin-right: 0;
+}
+
+.navbar-link {
+    color: black;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.icon {
+    display: none;
+}
+
+.navbar-lists li:nth-child(1) i {
+    color: orange;
+}
+
+.navbar-lists li:nth-child(2) i {
+    color: orange;
+}
+
+.navbar-lists li:nth-child(3) i {
+    color: orange;
+}
+
+.navbar-lists li:nth-child(4) i {
+    color: orange;
+}
+
+.navbar-lists li:nth-child(5) i {
+    color: orange;
+}
+
+.navbar-lists li:nth-child(6) i {
+    color: orange;
+}
