@@ -70,6 +70,15 @@
         </ul>
         </td>
         <td><img src="IMC.png" alt="hehe" width="400px" />&nbsp;</td>
+        <tr>
+            <td>Guide: Prof. Mrigank Sharad & Prof. Indrajit Chakrabarti</td>
+            <td><p>Institute: Indian Institute of Technology Kharagpur &<br>
+            DXCorr Design Inc., USA</p></td>
+        </tr>
+        <tr>
+            <td>Collaborator(s): Haldar A., Ingle P., Debnath S., Vairagade A., Sharad M.</td>
+            <td>Duration: January 2024 - Ongoing</td>
+        </tr>
         </tr></table>
 
         <h1>Ultra-wideband Wireless Integrated Circuits for Ultra-low Power Communications</h1>
@@ -88,23 +97,75 @@
         synchronization between the received signal and the integration window. In most of the prior literature, a PLL 
         has been used along with digital control logic to generate integration windows having different phases.<br><br>
         
-        My key contributions in this work are</p>
+        My key contributions in this work are:</p>
         <ul>
-        <li><p>I mathematically demonstrated a modulation scheme where </p>
-        </li>
+        <li><p>I mathematically demonstrated a modulation scheme named Analog Pulse-Width Modulation (A-PWM), where 4-bits of 
+        digital data are encoded in the form of the width of a rail-to-rail pulse. The pulse duration is the digital equivalent 
+        of the 4-bit binary word*100 ps. It has been shown that the energy per bit increases in this modulation scheme, 
+        resulting in enhanced communication range and low bit error rate.</p></li>
+        <li><p>Using the A-PWM modulation scheme, I proposed a novel non-coherent receiver architecture that does not
+        use a PLL for synchronization purpose. The proposed architecture only relies upon a squarer and time-interleaved
+        integrator for energy collection followed by a charge-pump for generating a ramp signal, which is then
+        sampled and digitized by a 4-bit SAR ADC.</p></li>
+        <li><p>Designed the Gilbert-cell based analog squarer and time-interleaved integrator as a part of the
+        receiver front-end in TSMC 180nm technology node. The detailed implementation is presented in the
+        <a href="https://drive.google.com/file/d/1PUG1IHETVVBnvzgurck00iJhnRELP7rZ/view?usp=drive_link">report</a>.</p></li>
         </ul>
-        </td></tr></table>
+        </td></tr>
+        <tr>
+            <td>Guide: Prof. Frederic Nabki</td>
+            <td>Institute: École de Technologie Supérieure Montréal</td>
+        </tr>
+        <tr>
+            <td>Collaborator(s): Ali Poursaadati Zinjanab & Nabki F.</td>
+            <td>Duration: 06.05.2024 - 26.07.2024</td>
+        </tr>
+        </table>
 
         <h1>Design of RHBD Cross-coupled Quadrature VCO</h1>
         <table class="imgtable"><tr>
-        <td align="justify"><p></p><br>
+        <td align="justify"><p>The Indian Space Research Organization (ISRO) required a 1 Gbps
+        Serializer-Deserializer (SERDES) module, to be used in high data-rate modulators and high-speed
+        solid state drivers for data storage. It consists of VCO, PLL, LVDS driver and receiver as its
+        building blocks. My contribution was on the design of the Voltage-Controlled Oscillator (VCO).<br><br>
+
+        Electronic circuits, when operated in space, experience sudden
+        charge injection in transistor junctions and unwanted perturbations in IC operation, called
+        Single Event Effects (SEEs). So, circuits must be radiation-hardened before operating them in space.
+        Prior designs for SEE-tolerant VCO used a majority voting scheme that used three parallel VCOs with pair-wise
+        capacitive cross-coupling between corresponding stages. This adds asymmetry to the VCO phases and makes one of
+        the phases unequal. Also, it does not ensure radiation tolerance at the output of the majority voting gate.<br><br>
+
+        The salient features of this work are:</p>
         <ul>
-        <li><p></p><br>
-        </li>
+        <li><p>We designed a VCO with an even number of equally-spaced phases (as required in half-rate or quadrature-rate
+        clock and data recovery circuits).</p></li>
+        <li><p>The proposed scheme does not rely on any majority voting gate and hence does not require any additional stage,
+        thereby mitigating any asymmetry and also reducing hardware overhead.</p></li>
+        <li><p>Each stage of the oscillator is split into N parallel branches, all of whose outputs are coupled to the
+        stage output by a parallel RC network. Coupling only through a capacitor fails to establish proper DC conditions.
+        So, large resistors are placed in parallel to establish a well-defined DC operating point.</p></li>
+        <li><p>In this manner, the effect of a strike on any one of the branches gets suppressed by a factor of N at
+        the stage output node.</p></li>
+        <li><p>The radiation-hardened VCO shows a nearly 80% reduction in clock jitter upon a radiation strike compared to
+        its unhardened counterpart.</p></li>
+        <li><p>We taped out the entire chip in SCL 180nm. This work resulted in a patent application for a novel VCO.
+        Detailed implementation is shown in the
+        <a href="https://drive.google.com/drive/folders/1edYr8KpipYyPyjZB5M1ySvkeC1IO2hZQ?usp=sharing">report</a>.</p></li>
         </ul>
         </td>
         <td><img src="IC.png" alt="hehe" width="400px" />&nbsp;</td>
-        </tr></table>
+        </tr>
+        <tr>
+            <td>Guide: Prof. Mrigank Sharad & Dr. Hari Shanker Gupta</td>
+            <td><p>Institute: Indian Institute of Technology Kharagpur &<br>
+            Space Applications Center (SAC) Ahmedabad, ISRO</p></td>
+        </tr>
+        <tr>
+            <td>Collaborator(s): Haldar A., Gupta H., & Sharad M.</td>
+            <td>Duration: May 2023 - December 2023</td>
+        </tr>
+        </table>
 
         <h1>Redundancy Algorithm for a 10-bit Sub-ranging ADC</h1>
         <table class="imgtable"><tr><td>
@@ -114,7 +175,16 @@
         <li><p></p><br>
         </li>
         </ul>
-        </td></tr></table>
+        </td></tr>
+        <tr>
+            <td>Guide: Prof. Prajit Nandi</td>
+            <td>Institute: Indian Institute of Technology Kharagpur</td>
+        </tr>
+        <tr>
+            <td>Collaborator(s): -</td>
+            <td>Duration: October 2024 - November 2024</td>
+        </tr>
+        </table>
 
         <h1>Design of 7-bit Frequency Counter type ADC</h1>
         <table class="imgtable"><tr>
