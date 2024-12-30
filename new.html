@@ -1,185 +1,56 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>
-            Saptashwa
-        </title>  
-        <link rel="icon" type="image/x-icon" href="favicon.jpg">
-        <link rel="stylesheet" type="text/css" href="new.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="about.css" type="text/css" />
+      <title>Saptashwa</title>
+      <link rel="icon" type="image/x-icon" href="favicon.jpg">
     </head>
-    <body>
-        <header>
-            <!--for creating the navigation bar-->
-            <div class="container1">
-                <nav>
-                    <!--elements of navigation-->
-                    <ul>
-                        <li><a href="index.html" style="text-decoration: none;">HOME</a></li>
-                        <li><a href="education.html" style="text-decoration:none;">Educational Background</a></li>
-			<li><a href="timetable.html" style="text-decoration:none;"> Time Table <Table></Table></a></li>
-			<li><a href="cv.html" style="text-decoration:none;">Resume</a></li>
-			<li><a href="transcript.html" style="text-decoration:none;">Transcript</a></li>
-                        <li><a href="contact.html" style="text-decoration:none;">Contact Me</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-	<!--About(start)-->
-	<table id="about" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor=#434750>
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td height="120" align="center"
-							valign="middle" colspan="2">
-							<font face="Montserrat" size="7"
-								color="yellow">
-								About Me
-							</font>
-							<hr color="yellow" width="90">
-						</td>
-					</tr>
-					<tr>
-						<td width="40%">
-							<img src="me.jpg" style="width:520px;height:500px;">
-						</td>
-						<td width="60%" align="justify">
-							<font face="Montserrat" size="4"
-								color="white">
-								I am Saptashwa Bhattacharjee, a senior undergraduate student in the 
-								Department of Electronics and Electrical Communication Engineering at the 
-								Indian Institute of Technology (IIT) Kharagpur.
-								<hr color=#434750>
 
-								I was born on 24<sup>th</sup> of August 2002 in a small town named Malda in 
-								the state of West Bengal, India. Born in a lower-middle-class family, I heard 
-								about the financial crisis, my elders had to endure. My eldest uncle, an exceptional 
-								student received an offer from medical school for undergraduate studies. However, 
-								an intense financial crisis prevented him from seeking admission. His paramount 
-								sacrifice had a profound impact on my development, and his grief to date has made me 
-								recognize the value of education. 
-								<hr color=#434750>
+    <body><center>
+      
+      <header class="header">
+        <a href="/">
+          <img src="favicon.jpg" alt="Saptashwa" /> 
+          <span class="Saptashwa">Saptashwa</span>
+          &nbsp;
+        </a>
+        <nav class="navbar">
+            <ul class="navbar-lists" id="myTopnav">
+                <li>
+                    <i class="fas fa-home"></i>
+                        <a class="navbar-link home-link" href="index.html">Home</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-user"></i>
+                        <a class="navbar-link about-link" href="about.html">About Me</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-book-reader"></i>
+                        <a class="navbar-link service-link" href="education.html">Education</a>
+                </li>
 
-								I have been fascinated by MOSFETs since I was introduced to it in my 2nd year of 
-								undergraduate study and decided to dig deeper into it. I started by reading the book 
-								<i>"Microelectronics"</i> and then continued exploring the next book in the series: <i>"Design of 
-								Analog CMOS Integrated Circuits"</i> series by Behzad Razavi. Following this, I was thoroughly trained 
-								in Cadence in the Advanced VLSI lab.	 
-								<hr color=#434750>
-								
-								My area of interest is Mixed Signal IC Design, Analog and Digital Electronic Circuits with a particular focus 
-								on oscillators, PLL, and making designs that are radiation hardened for space applications.
-								<hr color=#434750>
-								A few days back, an institute lecture organized by the Office of International Relations hosted Professor T. Venkatesan 
-								of the University of Oklahoma on "Recent Advances in Memristors for Neuromorphic Circuits." From then on, I got 
-								interested in this and thought that I could learn about it, explore it, and work in this domain. I read the first-ever 
-								paper about memristor that L. Chua published in IEEE. I feel that the memristor is a relatively new concept, with many 
-								applications like memristor-based memory design still untapped.
-							</font>
-						</td>
-					</tr>
-				</table>
-				<hr color=#434750>
-				<hr color=#434750>
-				<hr color=#434750>
-			</td>
-		</tr>
-	</table>
-	<!--About(end)-->
-	<!--Projects(start)-->
-	<style>
-		.collapsible {
-		  background-color: #d8d2d2;
-		  color: rgb(0, 0, 0);
-		  cursor: pointer;
-		  padding: 18px;
-		  width: 100%;
-		  border: none;
-		  text-align: left;
-		  outline: none;
-		  font-size: 15px;
-		  font-family:'Roboto Condensed' ;
-		}
-		
-		.active, .collapsible:hover {
-		  background-color: #f0f008;
-		}
-		
-		.collapsible:after {
-		  content: '\002B';
-		  color: white;
-		  font-weight: bold;
-		  float: right;
-		  margin-left: 5px;
-		}
-		
-		.active:after {
-		  content: "\2212";
-		}
-		
-		.content {
-		  padding: 0 18px;
-		  max-height: 0;
-		  overflow: hidden;
-		  transition: max-height 0.2s ease-out;
-		  background-color: #f1f1f1;
-		}
-		</style>
-		<center><h2 style="font-family:Montserrat"><b>Projects (click on each tab)</b></h4></center>
-		<button class="collapsible" style="font-family:Montserrat;">Quadrature Voltage Controlled Oscillator Design</button>
-		<div class="content">
-		  <br><img src="IC.jpg" class="center">
-		<p style="font-family:Montserrat" align="justify"><b>Guide : Professor Mrigank Sharad</b><br>
-		<b>Indian Institute of Technology Kharagpur</b><br><br>
-		My work focuses on designing a novel Voltage Controlled Oscillator for Indian
-		Space Research Organisation (ISRO) which can work for a frequency range of about 500MHz to 1.5GHz for a 
-		range of control voltages from 0 to 1.8V. Several different schemes were implemented such as using pmos input device, 
-		nmos input device, using native nmos. I tried using mimcap which has higher capacitance per unit area as compared to moscap. 
-		Apart from these, I also has to make it radiation hardened by design (RHBD) to tackle Single effect events (SEE) by dividing 
-		the each stage into several layers. I designed the enitre layout in Cadence Layout Suite and checked DRC and LVS.
-	    I also extracted parasitic capacitances using PEX simulation. After this, the post-layout simulation was carried out which 
-		showed some degradation in performace as compared to the theoritical frequency range. The layout has been modified
-		thereafter. Pad Integration was also done. The design is currently ready for fabrication.</p>
-		</div>
-		<button class="collapsible" style="font-family:Montserrat;">Analog Front End Design</button>
-		<div class="content">
-		<br><img src="frontend.png" class="center1">
-		<p style="font-family:Montserrat" align="justify"><b>Guide : Professor Mrigank Sharad</b><br>
-		<b>Indian Institute of Technology Kharagpur</b><br><br>
-		Designed a transistor level schematic in LTSpice using 180nm predictive technology model. A cascode 2 stage 
-		OP-AMP with a open loop gain of around 10000 and a closed loop gain( using capacitive feedback) of 100. After this,
-		a Voltage to Current converter has been made which converts the output voltage of the OP-AMP into current. this
-		current serves as the input of the current controlled oscillator (CCO). The disgned CCO is a currret starved inverter
-		configuration. The output of the CCO us digital in nature with a linear current verses frequency plot for a 
-		frequency upto 13MHz. The output of the CCO has been fed to a comparator to obtain a rectangular waveform with full
-		swing from 0 to 1.8V. This digital waveform goes to a counter which counts the number of pulses in a specific period. 
-		</div>
-		<button class="collapsible" style="font-family:Montserrat;">In-Memrory Computing for Machine Learning Accelerators</button>
-		<div class="content">
-		<p style="font-family:Montserrat" align="justify"><b>Guide : Professor Mrigank Sharad</b><br>
-		<b>Indian Institute of Technology Kharagpur</b><br><br>
-		</div>
-		
-		<script>
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-		
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
-			if (content.style.maxHeight){
-			  content.style.maxHeight = null;
-			} else {
-			  content.style.maxHeight = content.scrollHeight + "px";
-			} 
-		  });
-		}
-		</script>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                        <a class="navbar-link service-link" href="awards.html">Awards</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-microscope"></i>
+                        <a class="navbar-link service-link" href="project.html">Projects</a>
+                </li>
+                
+                <li>
+                    <i class="fas fa-envelope"></i>
+                        <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
 		
 	</body>
 </html>
