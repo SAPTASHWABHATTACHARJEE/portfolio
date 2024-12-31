@@ -55,22 +55,60 @@
         <h1>Research Interests</h1>
         <p style="text-align: center;">ML Accelerators, In-Memory Computing, Neuromorphic Circuits, Analog/RF & Mixed-Signal Design</p>
         </div></div>
-        <h1>SRAM-based In-Memory Computing Circuits for Deep Learning Accelerators</h1>
+
+        <h1>SRAM-based In-Memory Computing Circuits for Deep Learning Accelerators in TSMC 5nm FinFET</h1>
         <table class="imgtable"><tr>
-        <td align="justify"><p>Keep the discharge current constant amid PVT variations to ensure uniform and 
-        accurate computation across all corners.</p><br>
+        <td align="justify"><p>Modern DNN models require millions to billions of multiply-and-accumulate (MAC) operations.
+        Conventional Von-Neumann architectures create a wall between memory and computational units, forcing multiple data
+        transfers between the blocks. This results in a high energy per MAC operation. So, computations are now performed
+        within the memory, known as In-Memory-Computing. In our design, the crossbar is made of a modified bit-cell
+        (M-BC) consisting of a 6T SRAM cell.<br><br>
+
+        The biggest challenge is to keep the discharge current constant amid PVT variations to
+        ensure uniform and accurate computation across all corners. Additional aging effects such
+        as negative bias temperature instability (NBTI) and hot carrier injection (HCI) also come
+        into play, which causes transistor threshold voltages to drift over time. So, we propose a
+        novel calibration loop that modulates the gate voltage of the NMOS stack to keep the discharge current constant.
+        The calibration loop, consisting of a dynamic comparator, SAR logic, a DAC, a bandgap reference, and an LDO, ensures accurate
+        computation across all corners.<br><br>
+
+        At the input peripherals is a Pulse-Width Modulated (PWM) DAC, which takes in 4-bits and produces a pulse of
+        proportional width. This helps in executing multi-bit MAC operation.<br><br>
+
+        Conventionally, the voltage of each compute line is fed to an ADC for digitization. However, as ADCs are the most
+        power-hungry component in the design, we share ADCs between columns. So, it is essential to combine the voltage of
+        some columns with proper binary weights such that the resultant voltage can be applied as input to a single ADC.
+        This is done using a binary weighted capacitor-based voltage summation block.<br><br>
+
+        My key contributions in this work are:</p>
         <ul>
-        <li><p>The Federal Communication Commission allocated 7.5 GHz bandwidth (3.1-10.6 GHz) for ultra-wideband devices.
-        </p></li>
+        <li><p>Architectural design of the calibration loop [especially the bandgap and SAR logic blocks].</p></li>
+        <li><p>Implemented binary weighted capacitor-based voltage summation to reduce the number of ADCs in the
+        peripherals, thereby reducing power consumption by roughly 70%. Also found the ideal number of columns
+        to be capacitively coupled, keeping MAC accuracy in mind.</p></li>
+        <li><p>Designed a rail-to-rail Dynamic Comparator with a pre-amplifier as a part of the calibration loop.
+        The detailed implementation is shown in the <a href="https://drive.google.com/file/d/1GVdo4dCpiL4TAJvp_9VTgHPmCEPKhA_w/view?usp=drive_link">
+        thesis</a>.</p></li>
+        <li><p>Presently designing the 7-bit SAR ADC present in the output peripherals.</p></li>
         </ul>
         </td>
         <td><img src="IMC.png" alt="hehe" width="400px" />&nbsp;</td>
+        <tr>
+            <td>Guide: Prof. Mrigank Sharad & Prof. Indrajit Chakrabarti</td>
+            <td><p>Institute: Indian Institute of Technology Kharagpur &<br>
+            DX Corr Design Inc., USA</p></td>
+        </tr>
+        <tr>
+            <td>Collaborator(s): Haldar A., Ingle P., Debnath S., Vairagade A., & Sharad M.</td>
+            <td>Duration: January 2024 - Ongoing</td>
+        </tr>
         </tr></table>
+
         <h1>Ultra-wideband Wireless Integrated Circuits for Ultra-low Power Communications</h1>
         <table class="imgtable"><tr><td>
         <img src="UWB.png" alt="hehe" width="400px" />&nbsp;</td>
         <td align="justify"><p>In 2002, the Federal Communication Commission allocated a 7.5 GHz bandwidth 
-        (3.1-10.6 GHz) for ultra-wideband devices. This large bandwidth is achieved by using sub-nanosecond pulses and 
+        [3.1-10.6 GHz] for ultra-wideband devices. This large bandwidth is achieved by using sub-nanosecond pulses and 
         allows us to transmit data at high speeds. However, the maximum transmitted signal power, even if the entire spectrum 
         is utilized, is -14.3 dBm. This restricts the communication range. So, prior works have proposed 
         innovative modulation schemes that increases the transmission power.<br><br>
@@ -123,8 +161,8 @@
 
         The salient features of this work are:</p>
         <ul>
-        <li><p>We designed a VCO with an even number of equally-spaced phases (as required in half-rate or quadrature-rate
-        clock and data recovery circuits).</p></li>
+        <li><p>We designed a VCO with an even number of equally-spaced phases [as required in half-rate or quadrature-rate
+        clock and data recovery circuits].</p></li>
         <li><p>The proposed scheme does not rely on any majority voting gate and hence does not require any additional stage,
         thereby mitigating any asymmetry and also reducing hardware overhead.</p></li>
         <li><p>Each stage of the oscillator is split into N parallel branches, all of whose outputs are coupled to the
