@@ -92,7 +92,7 @@
         <li><p>Presently designing the 7-bit SAR ADC present in the output peripherals.</p></li>
         </ul>
         </td>
-        <td><img src="IMC.png" alt="hehe" width="400px" />&nbsp;</td>
+        <td><img src="IMC.png" alt="IMC" width="400px" />&nbsp;</td>
         <tr>
             <td>Guide: Prof. Mrigank Sharad & Prof. Indrajit Chakrabarti</td>
             <td><p>Institute: Indian Institute of Technology Kharagpur &<br>
@@ -106,7 +106,7 @@
 
         <h1>Ultra-wideband Wireless Integrated Circuits for Ultra-low Power Communications</h1>
         <table class="imgtable"><tr><td>
-        <img src="UWB.png" alt="hehe" width="400px" />&nbsp;</td>
+        <img src="UWB.png" alt="UWB" width="400px" />&nbsp;</td>
         <td align="justify"><p>In 2002, the Federal Communication Commission allocated a 7.5 GHz bandwidth 
         [3.1-10.6 GHz] for ultra-wideband devices. This large bandwidth is achieved by using sub-nanosecond pulses and 
         allows us to transmit data at high speeds. However, the maximum transmitted signal power, even if the entire spectrum 
@@ -131,7 +131,7 @@
         integrator for energy collection followed by a charge-pump for generating a ramp signal, which is then
         sampled and digitized by a 4-bit SAR ADC.</p></li>
         <li><p>Designed the Gilbert-cell based analog squarer and time-interleaved integrator as a part of the
-        receiver front-end in TSMC 180nm technology node. The detailed implementation is presented in the
+        receiver front-end in TSMC 180nm technology node. Detailed implementation is presented in the
         <a href="https://drive.google.com/file/d/1PUG1IHETVVBnvzgurck00iJhnRELP7rZ/view?usp=drive_link">report</a>.</p></li>
         </ul>
         </td></tr>
@@ -145,7 +145,7 @@
         </tr>
         </table>
 
-        <h1>Design of RHBD Cross-coupled Quadrature VCO</h1>
+        <h1>Design of Radiation-Hardened Cross-coupled Quadrature Voltage-Controlled Oscillator</h1>
         <table class="imgtable"><tr>
         <td align="justify"><p>The Indian Space Research Organization (ISRO) required a 1 Gbps
         Serializer-Deserializer (SERDES) module, to be used in high data-rate modulators and high-speed
@@ -177,7 +177,7 @@
         <a href="https://drive.google.com/drive/folders/1edYr8KpipYyPyjZB5M1ySvkeC1IO2hZQ?usp=sharing">report</a>.</p></li>
         </ul>
         </td>
-        <td><img src="IC.png" alt="hehe" width="400px" />&nbsp;</td>
+        <td><img src="IC.png" alt="SERDES" width="400px" />&nbsp;</td>
         </tr>
         <tr>
             <td>Guide: Prof. Mrigank Sharad & Dr. Hari Shanker Gupta</td>
@@ -190,13 +190,34 @@
         </tr>
         </table>
 
-        <h1>Redundancy Algorithm for a 10-bit Sub-ranging ADC</h1>
+        <h1>Redundancy Algorithm for a 10-bit Sub-Ranging ADC</h1>
         <table class="imgtable"><tr><td>
-        <img src="ASP.png" alt="hehe" width="400px" />&nbsp;</td>
-        <td align="justify"><p></p><br>
+        <img src="ASP.png" alt="ADC" width="400px" />&nbsp;<br><br>
+        <img src="Residue.png" alt="Residue" width="400px" />&nbsp;</td>
+        <td align="justify"><p>Successive Approximation ADC have good integral linearity, i.e., low INL, but
+        requires n clock cycles to achieve a n-bit resolution. Flash ADCs on the other hand are one-shot, in
+        the sense that all the n-bits are obtained at once. However, Flash ADC requires 2<sup>n-1</sup>
+        comparators which makes its silicon footprint extremely large. To this end, the speed of Flash is
+        combined with the linearity of SAR to make something known as Sub-Ranging ADC. In this project, we
+        realize a switched-capacitor-based 10-bit Sub-Ranging ADC with 3-bit Flash ADC and 7-bit SAR.
+        The first 3-bits are resolved by a Flash ADC while the residue is resolved by a SAR ADC.<br><br>
+
+        Switched-capacitor implementations are vulnerable to parasitic capacitors at the top plate of the sampling
+        cap. These parasitic capacitors take part in the charge sharing process and degrade the ADC linearity.
+        Additionally, mismatches between the binary-weighted capacitors and variation in flash comparator references
+        also contribute to the error. So, we came up with a Redundancy Algorithm with 2 redundant bits for
+        ensuring ADC accuracy at the cost of 4 redundant caps. The Redundancy Algorithm is implemeted using
+        Python and the residue graph is plotted.<br><br>
+
+        The highlights of this project are:</p>
         <ul>
-        <li><p></p><br>
-        </li>
+        <li><p>Designed a switched-capacitor-based 10-bit Sub-Ranging ADC [3-bit Flash and 7-bit SAR] in Cadence.</p></li>
+        <li><p>Implemented a Redundancy Algorithm with 2 redundant bits for the above ADC to ensure
+        correct digital output even in the presence of capacitor mismatch, parasitic capacitor on the top
+        plate of the CDAC, offsets in the comparator, and reference voltage error.</p></li>
+        <li><p>Evaluated the ADC performance using DNL and residue plot. Detailed implementation is presented in the
+        <a href="https://drive.google.com/file/d/1zdhdaQP6iG8aB5neFI46ocG99Zq698eq/view?usp=sharing">report</a>.
+        </p></li>
         </ul>
         </td></tr>
         <tr>
@@ -217,7 +238,7 @@
         </li>
         </ul>
         </td>
-        <td><img src="Mathieu.png" alt="hehe" width="400px" />&nbsp;</td>
+        <td><img src="Mathieu.png" alt="ADC" width="400px" />&nbsp;</td>
         </tr></table>
         </td></tr></table>
   </center></body>
