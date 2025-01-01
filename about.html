@@ -1,270 +1,263 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="about.css" type="text/css" />
-    <title>Saptashwa</title>
-    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Saptashwa</title>  
+        <link rel="icon" type="image/x-icon" href="favicon.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="about.css">
+    </head>
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        .ss {vertical-align: middle;}
 
+        /* Slideshow container */
         .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: 20px auto; /* Added top/bottom margin */
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        margin-top:30px;
         }
 
-        .mySlides1, .mySlides2 {
-            display: none;
-        }
-
-        img {
-            vertical-align: middle;
-            max-width: 100%; /* Prevents images from overflowing */
-            height: auto;
-        }
-
+        /* Next & previous buttons */
         .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        margin-left: -42px;
+        margin-right: -42px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
         }
 
+        /* Position the "next button" to the right */
         .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+        right: 0;
+        border-radius: 3px 0 0 3px;
         }
 
+        /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0,0,0,0.8);
+        border-bottom: none;
         }
 
+        /* Caption text */
+        .text {
+        color: #f2f2f2;
+        font-size: 16px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        padding: 8px 12px;
+        top: -30px;
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* The dots/bullets/indicators */
         .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
         }
 
         .active, .dot:hover {
-            background-color: #717171;
+        background-color: #717171;
         }
 
-        .dots-container {
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 20px;
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
         }
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
         }
     </style>
-  </head>
 
-  <body>
-      
-    <header class="header">
-      <a href="#">
-        <img src="favicon.jpg" alt="Saptashwa" /> 
-        <span class="Saptashwa">Saptashwa</span>
-        &nbsp;
-      </a>
-      <nav class="navbar">
-          <ul class="navbar-lists" id="myTopnav">
-              <li>
-                  <i class="fas fa-home"></i>
-                      <a class="navbar-link home-link" href="index.html">Home</a>
-              </li>
-              
-              <li>
-                  <i class="fas fa-user"></i>
-                      <a class="navbar-link about-link" href="about.html">About Me</a>
-              </li>
-              
-              <li>
-                  <i class="fas fa-book-reader"></i>
-                      <a class="navbar-link service-link" href="education.html">Education</a>
-              </li>
+    <body bgcolor=#434750>
 
-              <li>
-                  <i class="fas fa-graduation-cap"></i>
-                      <a class="navbar-link service-link" href="awards.html">Awards</a>
-              </li>
+        <header class="header">
+            <a href="#">
+            <img src="favicon.jpg" alt="SB"> 
+                <span class="Saptashwa">Saptashwa</span>
+            </a>
+            
+            <nav class="navbar">
+                <ul class="navbar-lists" id="myTopnav">
+                    <li>
+                        <i class="fas fa-home"></i>
+                            <a class="navbar-link home-link" href="index.html">Home</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-user"></i>
+                            <a class="navbar-link about-link" href="about.html">About Me</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-book-reader"></i>
+                            <a class="navbar-link service-link" href="education.html">Education</a>
+                    </li>
 
-              <li>
-                  <i class="fas fa-microscope"></i>
-                      <a class="navbar-link service-link" href="project.html">Projects</a>
-              </li>
-              
-              <li>
-                  <i class="fas fa-envelope"></i>
-                      <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
-              </li>
-          </ul>
-      </nav>
-  </header>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i>
+                            <a class="navbar-link service-link" href="awards.html">Awards</a>
+                    </li>
 
-  <h1 style="text-align: center;">Hi!</h1>
-  <table class="imgtable"><tr>
-  <td align="justify" width="825px"><p>I am Saptashwa Bhattacharjee, a senior undergraduate student in the
-      Department of Electronics and Electrical Communication Engineering at the Indian Institute
-      of Technology (IIT) Kharagpur.<br><br>
+                    <li>
+                        <i class="fas fa-microscope"></i>
+                            <a class="navbar-link service-link" href="project.html">Projects</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                            <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+                
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
 
-      I was born on 24th of August 2002 in a small town named Malda in the state of West Bengal,
-      India. Born in a lower-middle-class family, I heard about the financial crisis, my elders
-      had to endure. My eldest uncle, an exceptional student received an offer from medical school
-      for undergraduate studies. However, an intense financial crisis prevented him from seeking admission.
-      His paramount sacrifice had a profound impact on my development, and his grief to date has made me
-      recognize the value of education.<br><br>
+        <h1 style="text-align: center;">Hi!</h1>
+        <table class="imgtable"><tr>
+        <td align="justify" width="825px"><p>I am Saptashwa Bhattacharjee, a senior undergraduate student in the
+        Department of Electronics and Electrical Communication Engineering at the Indian Institute
+        of Technology (IIT) Kharagpur.<br><br>
 
-      I have been fascinated by MOSFETs since I was introduced to it in my 2nd year of undergraduate study
-      and decided to dig deeper into it. I started by reading the book "Microelectronics" and then continued
-      exploring the next book in the series: "Design of Analog CMOS Integrated Circuits" series by Behzad Razavi.
-      Following this, I was thoroughly trained in Cadence in the Advanced VLSI lab.<br><br>
+        I was born on 24th of August 2002 in a small town named Malda in the state of West Bengal,
+        India. Born in a lower-middle-class family, I heard about the financial crisis, my elders
+        had to endure. My eldest uncle, an exceptional student received an offer from medical school
+        for undergraduate studies. However, an intense financial crisis prevented him from seeking admission.
+        His paramount sacrifice had a profound impact on my development, and his grief to date has made me
+        recognize the value of education.<br><br>
 
-      A few days back, an institute lecture organized by the Office of International Relations hosted
-      Professor T. Venkatesan of the University of Oklahoma on "Recent Advances in Memristors for Neuromorphic
-      Circuits." From then on, I got interested in this and thought that I could learn about it, explore it, and
-      work in this domain. I read the first-ever paper about memristor that L. Chua published in IEEE.</p></td>
+        I have been fascinated by MOSFETs since I was introduced to it in my 2nd year of undergraduate study
+        and decided to dig deeper into it. I started by reading the book "Microelectronics" and then continued
+        exploring the next book in the series: "Design of Analog CMOS Integrated Circuits" series by Behzad Razavi.
+        Following this, I was thoroughly trained in Cadence in the Advanced VLSI lab.<br><br>
 
-  <td><img src="saptashwa1.jpg" alt="saptashwa" width="400px" />&nbsp;</td>
-  </tr></table>
+        A few days back, an institute lecture organized by the Office of International Relations hosted
+        Professor T. Venkatesan of the University of Oklahoma on "Recent Advances in Memristors for Neuromorphic
+        Circuits." From then on, I got interested in this and thought that I could learn about it, explore it, and
+        work in this domain. I read the first-ever paper about memristor that L. Chua published in IEEE.</p></td>
 
-  <h1 style="text-align: center;">Position(s) of Responsibility</h1>
-  <table class="imgtable"><tr>
-  <td align="justify" width="825px">
-  <p>I served as the Secretary of the Electronics and Electrical Communication Engineering Department Society
-  in the academic year 2022-2023. In my tenure, I worked with co-members of the society in initiating a blog
-  series - Corepedia, which aims at guiding students through core internship and placement preparation. I also
-  acted as the first point of contact in addressing concerns of nearly a 1000 students of the department.</p><br><br>
+        <td><img src="saptashwa1.jpg" alt="saptashwa" width="400px" />&nbsp;</td>
+        </tr></table>
 
-  <td><img src="E&ECE.jpg" alt="E&ECE" width="100px" height="100px" style="margin-left: 150%;"/>&nbsp;
-  </td></td>
-  </tr></table>
+        <h1 style="text-align: center;">Position(s) of Responsibility</h1>
+        <table class="imgtable"><tr>
+        <td align="justify" width="825px">
+        <p>I served as the Secretary of the Electronics and Electrical Communication Engineering Department Society
+        in the academic year 2022-2023. In my tenure, I worked with co-members of the society in initiating a blog
+        series - Corepedia, which aims at guiding students through core internship and placement preparation. I also
+        acted as the first point of contact in addressing concerns of nearly a 1000 students of the department.</p><br><br>
 
-  <h1 style="text-align: center;">My Campus Involvements</h1>
-  <div class="slideshow-container">
-      <div class="mySlides1">
-          <img src="swarm.png" style="width:100%" alt="Swarm">
-          <div class="text">Swarm</div>
-      </div>
-      <div class="mySlides1">
-          <img src="tk.png" style="width:100%" alt="TK">
-          <div class="text">TK</div>
-      </div>
-      <div class="mySlides1">
-          <img src="ecell.png" style="width:100%" alt="Ecell">
-          <div class="text">Ecell</div>
-      </div>
-      <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-      <div class="dots-container" id="dots1"></div>
-  </div>
+        <td><img src="E&ECE.jpg" alt="E&ECE" width="100px" height="100px" style="margin-left: 150%;"/>&nbsp;
+        </td></td>
+        </tr></table>
 
-  <h1 style="text-align: center;">Photo Gallery</h1>
-  <div class="slideshow-container">
-      <div class="mySlides2">
-          <img src="nabki.jpg" style="width:100%" alt="Nabki">
-          <div class="text">Nabki</div>
-      </div>
-      <div class="mySlides2">
-          <img src="mrigank.jpg" style="width:100%" alt="Mrigank">
-          <div class="text">Mrigank</div>
-      </div>
-      <div class="mySlides2">
-          <img src="toronto.jpg" style="width:100%" alt="Toronto">
-          <div class="text">Toronto</div>
-      </div>
-      <div class="mySlides2">
-          <img src="rk.jpg" style="width:100%" alt="RK">
-          <div class="text">RK</div>
-      </div>
-      <div class="mySlides2">
-          <img src="roommates.jpg" style="width:100%" alt="Roommates">
-          <div class="text">Roommates</div>
-      </div>
-      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-      <div class="dots-container" id="dots2"></div>
-  </div>
+        <h1 style="text-align: center;">My Campus Involvements</h1>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-  <script>
-    let slideIndex = [1, 1];
-        let slideId = ["mySlides1", "mySlides2"];
-        let dotsId = ["dots1", "dots2"];
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="swarm.png" style="height: 300px; width:100%; margin-bottom: 50px;" class="ss">
+            <div class="text">I was a member of the Mechatronics Subsystem of Swarm Robotics Group at IIT
+            Kharagpur.
+            </div>
+            </div>
+            
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="tk.png" style="height: 300px; width:100%; margin-bottom: 50px;" class="ss">
+            <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="ecell.png" style="height: 300px; width: 100%; margin-bottom: 50px;" class="ss">
+            <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
 
-        createDots();
-        showSlides(1, 0);
-        showSlides(1, 1);
-
-        function createDots() {
-            for (let j = 0; j < slideId.length; j++) {
-                let slides = document.getElementsByClassName(slideId[j]);
-                let dotsContainer = document.getElementById(dotsId[j]);
-                for (let i = 0; i < slides.length; i++) {
-                    let dot = document.createElement("span");
-                    dot.className = "dot";
-                    dot.onclick = (function(n, no) {
-                        return function() {
-                            currentSlide(n, no);
-                        };
-                    })(i + 1, j);
-                    dotsContainer.appendChild(dot);
-                }
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
             }
-        }
 
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
-        }
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
 
-        function currentSlide(n, no) {
-            showSlides(slideIndex[no] = n, no);
-        }
-
-        function showSlides(n, no) {
+            function showSlides(n) {
             let i;
-            let slides = document.getElementsByClassName(slideId[no]);
-            let dots = document.getElementById(dotsId[no]).getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex[no] = 1 }
-            if (n < 1) { slideIndex[no] = slides.length }
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].style.display = "none";  
             }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex[no] - 1].style.display = "block";
-            dots[slideIndex[no] - 1].className += " active";
-        }
-  </script>
-  </body>
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </body>
 </html>
