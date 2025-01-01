@@ -1,9 +1,8 @@
 <html>
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Saptashwa</title>  
+        <title>Saptashwa</title>
         <link rel="icon" type="image/x-icon" href="favicon.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="about.css">
@@ -17,140 +16,134 @@
 
         /* Slideshow container */
         .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-        margin-top:30px;
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            margin-top:30px;
         }
 
         /* Next & previous buttons */
         .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        margin-left: -42px;
-        margin-right: -42px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            margin-left: -42px;
+            margin-right: -42px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
 
         /* Position the "next button" to the right */
         .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
+            right: 0;
+            border-radius: 3px 0 0 3px;
         }
 
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-        border-bottom: none;
+            background-color: rgba(0,0,0,0.8);
+            border-bottom: none;
         }
 
         /* Caption text */
         .text {
-        color: #f2f2f2;
-        font-size: 16px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 1px;
-        width: 100%;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
+            color: #f2f2f2;
+            font-size: 16px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 1px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         /* Number text (1/3 etc) */
         .numbertext {
-        padding: 8px 12px;
-        top: -30px;
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
+            padding: 8px 12px;
+            top: -30px;
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         /* The dots/bullets/indicators */
         .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
         }
 
         .active, .dot:hover {
-        background-color: #717171;
+            background-color: #717171;
         }
 
         /* Fading animation */
         .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
         }
 
         @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
+            from {opacity: .4}
+            to {opacity: 1}
         }
 
         /* On smaller screens, decrease text size */
         @media only screen and (max-width: 300px) {
-        .prev, .next,.text {font-size: 11px}
+            .prev, .next,.text {font-size: 11px}
         }
     </style>
 
     <body bgcolor=#434750>
-
         <header class="header">
             <a href="#">
-            <img src="favicon.jpg" alt="SB"> 
+                <img src="favicon.jpg" alt="SB">
                 <span class="Saptashwa">Saptashwa</span>
             </a>
-            
+
             <nav class="navbar">
                 <ul class="navbar-lists" id="myTopnav">
                     <li>
                         <i class="fas fa-home"></i>
-                            <a class="navbar-link home-link" href="index.html">Home</a>
+                        <a class="navbar-link home-link" href="index.html">Home</a>
                     </li>
-                    
                     <li>
                         <i class="fas fa-user"></i>
-                            <a class="navbar-link about-link" href="about.html">About Me</a>
+                        <a class="navbar-link about-link" href="about.html">About Me</a>
                     </li>
-                    
                     <li>
                         <i class="fas fa-book-reader"></i>
-                            <a class="navbar-link service-link" href="education.html">Education</a>
+                        <a class="navbar-link service-link" href="education.html">Education</a>
                     </li>
-
                     <li>
                         <i class="fas fa-graduation-cap"></i>
-                            <a class="navbar-link service-link" href="awards.html">Awards</a>
+                        <a class="navbar-link service-link" href="awards.html">Awards</a>
                     </li>
-
                     <li>
                         <i class="fas fa-microscope"></i>
-                            <a class="navbar-link service-link" href="project.html">Projects</a>
+                        <a class="navbar-link service-link" href="project.html">Projects</a>
                     </li>
-                    
                     <li>
                         <i class="fas fa-envelope"></i>
-                            <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
+                        <a class="navbar-link contact-link" href="contact.html">Contact Me</a>
                     </li>
                 </ul>
-                
+
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -158,106 +151,175 @@
         </header>
 
         <h1 style="text-align: center;">Hi!</h1>
-        <table class="imgtable"><tr>
-        <td align="justify" width="825px"><p>I am Saptashwa Bhattacharjee, a senior undergraduate student in the
-        Department of Electronics and Electrical Communication Engineering at the Indian Institute
-        of Technology (IIT) Kharagpur.<br><br>
+        <table class="imgtable">
+            <tr>
+                <td align="justify" width="825px">
+                    <p>I am Saptashwa Bhattacharjee, a senior undergraduate student in the
+                    Department of Electronics and Electrical Communication Engineering at the Indian Institute
+                    of Technology (IIT) Kharagpur.<br><br>
 
-        I was born on 24th of August 2002 in a small town named Malda in the state of West Bengal,
-        India. Born in a lower-middle-class family, I heard about the financial crisis, my elders
-        had to endure. My eldest uncle, an exceptional student received an offer from medical school
-        for undergraduate studies. However, an intense financial crisis prevented him from seeking admission.
-        His paramount sacrifice had a profound impact on my development, and his grief to date has made me
-        recognize the value of education.<br><br>
+                    I was born on 24th of August 2002 in a small town named Malda in the state of West Bengal,
+                    India. Born in a lower-middle-class family, I heard about the financial crisis, my elders
+                    had to endure. My eldest uncle, an exceptional student received an offer from medical school
+                    for undergraduate studies. However, an intense financial crisis prevented him from seeking admission.
+                    His paramount sacrifice had a profound impact on my development, and his grief to date has made me
+                    recognize the value of education.<br><br>
 
-        I have been fascinated by MOSFETs since I was introduced to it in my 2nd year of undergraduate study
-        and decided to dig deeper into it. I started by reading the book "Microelectronics" and then continued
-        exploring the next book in the series: "Design of Analog CMOS Integrated Circuits" series by Behzad Razavi.
-        Following this, I was thoroughly trained in Cadence in the Advanced VLSI lab.<br><br>
+                    I have been fascinated by MOSFETs since I was introduced to it in my 2nd year of undergraduate study
+                    and decided to dig deeper into it. I started by reading the book "Microelectronics" and then continued
+                    exploring the next book in the series: "Design of Analog CMOS Integrated Circuits" series by Behzad Razavi.
+                    Following this, I was thoroughly trained in Cadence in the Advanced VLSI lab.<br><br>
 
-        A few days back, an institute lecture organized by the Office of International Relations hosted
-        Professor T. Venkatesan of the University of Oklahoma on "Recent Advances in Memristors for Neuromorphic
-        Circuits." From then on, I got interested in this and thought that I could learn about it, explore it, and
-        work in this domain. I read the first-ever paper about memristor that L. Chua published in IEEE.</p></td>
-
-        <td><img src="saptashwa1.jpg" alt="saptashwa" width="400px" />&nbsp;</td>
-        </tr></table>
+                    A few days back, an institute lecture organized by the Office of International Relations hosted
+                    Professor T. Venkatesan of the University of Oklahoma on "Recent Advances in Memristors for Neuromorphic
+                    Circuits." From then on, I got interested in this and thought that I could learn about it, explore it, and
+                    work in this domain. I read the first-ever paper about memristor that L. Chua published in IEEE.</p>
+                </td>
+                <td><img src="saptashwa1.jpg" alt="saptashwa" width="400px" />&nbsp;</td>
+            </tr>
+        </table>
 
         <h1 style="text-align: center;">Position(s) of Responsibility</h1>
-        <table class="imgtable"><tr>
-        <td align="justify" width="825px">
-        <p>I served as the Secretary of the Electronics and Electrical Communication Engineering Department Society
-        in the academic year 2022-2023. In my tenure, I worked with co-members of the society in initiating a blog
-        series - Corepedia, which aims at guiding students through core internship and placement preparation. I also
-        acted as the first point of contact in addressing concerns of nearly a 1000 students of the department.</p><br><br>
-
-        <td><img src="E&ECE.jpg" alt="E&ECE" width="100px" height="100px" style="margin-left: 150%;"/>&nbsp;
-        </td></td>
-        </tr></table>
+        <table class="imgtable">
+            <tr>
+                <td align="justify" width="825px">
+                    <p>I served as the Secretary of the Electronics and Electrical Communication Engineering Department Society
+                    in the academic year 2022-2023. In my tenure, I worked with co-members of the society in initiating a blog
+                    series - Corepedia, which aims at guiding students through core internship and placement preparation. I also
+                    acted as the first point of contact in addressing concerns of nearly a 1000 students of the department.</p><br><br>
+                </td>
+                <td><img src="E&ECE.jpg" alt="E&ECE" width="100px" height="100px" style="margin-left: 150%;"/>&nbsp;
+                </td>
+            </tr>
+        </table>
 
         <h1 style="text-align: center;">My Campus Involvements</h1>
         <!-- Slideshow container -->
         <div class="slideshow-container">
+            <div class="mySlides1 fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="swarm.jpg" style="height: 300px; width:100%; margin-bottom: 50px;" class="ss">
+                <div class="text">I was a member of the Mechatronics Subsystem of Swarm Robotics Group at IIT
+                Kharagpur.</div>
+            </div>
 
-            <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="swarm.jpg" style="height: 300px; width:100%; margin-bottom: 50px;" class="ss">
-            <div class="text">I was a member of the Mechatronics Subsystem of Swarm Robotics Group at IIT
-            Kharagpur.
+            <div class="mySlides1 fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="tk.jpg" style="height: 300px; width:100%; margin-bottom: 50px;" class="ss">
+                <div class="text">Caption Two</div>
             </div>
+
+            <div class="mySlides1 fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="ecell.jpg" style="height: 300px; width: 100%; margin-bottom: 50px;" class="ss">
+                <div class="text">I served as a Core Member at the E-Cell of IIT Kharagpur.</div>
             </div>
-            
-            <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="tk.jpg" style="height: 300px; width:100%; margin-bottom: 50px;" class="ss">
-            <div class="text">Caption Two</div>
-            </div>
-            
-            <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="ecell.jpg" style="height: 300px; width: 100%; margin-bottom: 50px;" class="ss">
-            <div class="text">Caption Three</div>
-            </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
+
+            <!-- Prev/Next buttons -->
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
         </div>
-    
+
+        <br>
+
+        <!-- Dots for the first slideshow -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 0)"></span>
+            <span class="dot" onclick="currentSlide(2, 0)"></span>
+            <span class="dot" onclick="currentSlide(3, 0)"></span>
+        </div>
+
+        <!-- Second Slideshow -->
+        <h1 style="text-align: center;">Photo Gallery</h1>
+        <div class="slideshow-container">
+            <div class="mySlides2 fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="nabki.jpg" style="height: 300px; width: 70%; margin: 0 auto; display: block;" class="ss">
+                <div class="text">Caption One</div>
+            </div>
+
+            <div class="mySlides2 fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="mrigank.jpg" style="height: 300px; width:50%; margin: 0 auto; display: block;" class="ss">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides2 fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="toronto.jpg" style="height: 300px; width:40%; margin: 0 auto; display: block;" class="ss">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides2 fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="rk.jpg" style="height: 300px; width:40%; margin: 0 auto; display: block;" class="ss">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides2 fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="roommates.jpg" style="height: 300px; width:45%; margin: 0 auto; display: block;" class="ss">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Prev/Next buttons -->
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <!-- Dots for the second slideshow -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 1)"></span>
+            <span class="dot" onclick="currentSlide(2, 1)"></span>
+            <span class="dot" onclick="currentSlide(3, 1)"></span>
+            <span class="dot" onclick="currentSlide(4, 1)"></span>
+            <span class="dot" onclick="currentSlide(5, 1)"></span>
+        </div>
+
         <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
+            let slideIndex = [1, 1]; // To manage the two slideshows
+            let slideId = ["mySlides1", "mySlides2"]; // Class names for the slideshows
 
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no); // Update the slide index for the specific slideshow
             }
 
-            function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+            function currentSlide(n, no) {
+                showSlides(slideIndex[no] = n, no); // Set the specific slide for the specific slideshow
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+
+            function showSlides(n, no) {
+                let i;
+                let slides = document.getElementsByClassName(slideId[no]);
+                let dots = document.getElementsByClassName("dot");
+                
+                // Wrap the slide index to ensure it stays within the valid range
+                if (n > slides.length) {slideIndex[no] = 1}
+                if (n < 1) {slideIndex[no] = slides.length}
+                
+                // Hide all slides initially
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                
+                // Remove the 'active' class from all dots
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                // Show the current slide and add fade effect
+                slides[slideIndex[no]-1].style.display = "block";
+                slides[slideIndex[no]-1].className += " fade"; // Add fade to the visible slide
+                
+                // Highlight the active dot
+                dots[slideIndex[no]-1].className += " active";
             }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            }
+
+            // Initialize the slideshows
+            showSlides(1, 0); // Initialize first slideshow
+            showSlides(1, 1); // Initialize second slideshow
         </script>
     </body>
 </html>
