@@ -8,6 +8,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+	background:#fff;
+}
+
 .Saptashwa {
   text-decoration: none;
   color: #2a2cb5;
@@ -102,4 +106,19 @@ a:hover {
   font-size: xx-large;
   color: #2a2cb5;
   width: 100%;
+}
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	color: #2a2cb5;
+	font-style: italic;
+  font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 10px;
+  padding: 10px;
 }
