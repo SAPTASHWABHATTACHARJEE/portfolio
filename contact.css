@@ -177,3 +177,16 @@ margin-top: 0;
     color: white;
     text-align:center;
 }
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #434750;
+	color: #fff;
+	font-style: italic;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+}
