@@ -265,3 +265,15 @@ header a:hover {
 .navbar-lists li:nth-child(6) i {
     color: orange;
 }
+
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #434750;
+	color: #fff;
+	font-style: italic;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
